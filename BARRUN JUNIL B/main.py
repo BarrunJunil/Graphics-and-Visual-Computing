@@ -1,11 +1,11 @@
 # This entrypoint file to be used in development. Start by reading README.md
-from pytest import main
+from time_calculator import add_time
+from unittest import main
 
-from arithmetic_arranger import arithmetic_arranger
 
-
-print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
-
+print(add_time("11:06 PM", "2:02"))
+print(add_time("8:16 PM", "466:02"))
+print(add_time("11:59 PM", "24:05"))
 
 # Run unit tests automatically
-main(['-vv'])
+main(module='test_module', exit=False)
